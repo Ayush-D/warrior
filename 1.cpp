@@ -1,6 +1,4 @@
-//Deepak Aggarwal, Coding Blocks
-//deepak@codingblocks.com
-
+//MERGE K SORTED ARRAYS
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
