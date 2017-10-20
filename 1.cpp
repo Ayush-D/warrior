@@ -27,5 +27,4 @@ int main(){
 	for(set<int >::const_iterator it=s.begin(); it!=s.end() ; it++){
 		cout<<*it<<" ";
 	}
-
 }
