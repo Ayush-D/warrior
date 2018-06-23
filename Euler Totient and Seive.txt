@@ -36,15 +36,15 @@ template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b)));}
 template<typename T> T extended_euclid(T a, T b, T &x, T &y){T xx=0,yy=1;y=0;x=1;while(b){T q=a/b,t=b;b=a%b;a=t;t=xx;xx=x-q*xx;x=t;t=yy;yy=y-q*yy;y=t;}return a;}
 template<typename T> T mod_inverse(T a, T n){T x,y;T d = extended_euclid(a, n, x, y);return (d>1?-1:mod_neg(x,n));}
 
-#define FOR(i,x,y) for(long i = (x) ; i <= (y) ; ++i)
 
+#define FOR(i,x,y) for(long i = (x) ; i <= (y) ; ++i)
 
 long phi[10000005];   //Using totient function
 bool prime[10000005];
 long primer[10000005];  //Calculate number of prime no. till n.
 
 void precal( int n ) {
-    ///Calculate phi from 1 to n using sieve
+    ///Calculate phi from 1 to n using sieve it's diff approach than https://cp-algorithms.com/algebra/phi-function.html
     FOR(i,1,n) phi[i] = i;
     FOR(i,2,n) {
         if ( phi[i] == i ) {
