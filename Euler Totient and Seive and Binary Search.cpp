@@ -101,3 +101,31 @@ int main(int argc, char const *argv[])
   }
   return 0;
 }
+
+//Binary Search Errichto Ques TCO link : https://community.topcoder.com/stat?c=problem_statement&pm=14397
+Div2 Medium: LastDigit and it Uses bianry Search for Big Numbers 
+Explanaion:
+It's helpful to notice that we can write the formula for S as: S(X)=X+⌊X10⌋+⌊X100⌋+.... Now it becomes obvious that the function S(X) is strictly increasing (because every component like ⌊X10⌋ is increasing).
+
+So we want to find such x that f(x)=y for some particular y. It's a standard problem for increasing functions, for which we can binary search the value x. In the code you will need the function to calculate f(x), i.e. the function for finding S.
+
+    //Code
+long f(long X) {
+    long S = 0;
+    while(X > 0) {
+        S += X;
+        X /= 10;
+    }
+    return S;
+}
+public long findX(long S) {
+    // binary search
+    long low = 1, high = 1000000000L * 1000000000;
+    while(low < high) {
+        long mid = (low + high) / 2;
+        if(f(mid) < S) low = mid + 1;
+        else high = mid;
+    }
+    if(f(low) == S) return low;
+    return -1;
+}
