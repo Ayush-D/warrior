@@ -2,6 +2,31 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+//***********************************************************************\\
+//                   Forget from GeeksforGeeks and use this
+//Using C++ bitset and much more optimisations
+//Taken from https://github.com/kartikkukreja/blog-codes/blob/master/src/spoj_CPRIME.cpp
+
+const int MAX = (int)1e8 + 8;
+
+bitset<MAX/2+1> num;
+vector<int> primes;
+
+void EratostheneSieve() {
+    int x = MAX/2, y =(sqrt(MAX)-1)/2, i, j, z;
+    for (i = 1; i <= y; ++i) {
+        if (num[i] == 0) {
+            for (j = (i*(i+1))<<1, z = (i<<1); j <= x; j += z+1) {
+                num[j] = 1;
+            }
+        }
+    }
+    primes.emplace_back(2);
+    for (i = 3; i < MAX; i += 2) {
+        if (!num[i>>1]) primes.emplace_back(i);
+    }
+}
+//*************************************************************************\\
 
 int main () {
     //precal( (int)1e7 );
