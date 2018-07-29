@@ -45,7 +45,7 @@ int main () {
     }
 
 
-    //Sum of Divisors Sieve O(n log n)
+    //Sum of all (including primes and non primes) Divisors Sieve O(n log n)
     int sumdiv[n + 1]{0};
     for (int i = 1; i <= n; ++i)
      for (int j = i; j <= n; j += i)
@@ -56,6 +56,20 @@ int main () {
         cout<<sumdiv[i]<<" ";
     }
    
+    //Sum of all prime Divisors of a number O(nlogn)
+    int primediv[n+1]{0};
+    for(int i=2;i<=n;i++){
+        if(primediv[i] == 0){
+            for(int j=i; j<=n; j+=i){
+                primediv[j] += i;
+            }
+        }
+    }
+    //Print all divisors sum of primes till 1 to N
+    for(int i=0; i<n; i++){
+        cout<<primediv[i]<<" ";
+    }
+    
     //Biggest Prime Divisor Sieve O(n log log n)
     int big[n + 1] = {1, 1};
     for (int i = 1; i <= n; ++i)
