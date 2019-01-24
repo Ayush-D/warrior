@@ -7,10 +7,8 @@ char dp[105][105];
 
 string lcs(string a, string b, int i, int j, string k){
     if(i == -1 || j == -1){
-        //cout<<"Y";
         return k;
     }
-    if()
     if(a[i] == b[j]){
         return lcs(a,b,i-1,j-1,a[i]+k);
     }
