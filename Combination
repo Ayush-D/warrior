@@ -1,5 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+#define fastio          std::ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
+#define LL              long long
+#define LD              long double
+#define MAX             200005
+//#define MOD             1000000007
+#define REP(i,n)        for(__typeof(n) i=0; i<n; ++i)
+#define CREP(i,n)       for(__typeof(n) i=n-1; i>=0; --i)
+#define MYREP(i,a,b)    for(__typeof(a) i=a; i<=b; ++i)
+#define MYCREP(i,a,b)   for(__typeof(a) i=b; i>=a; --i)
+
+#include <bits/stdc++.h>
+using namespace std;
 typedef long long ll;
  
 #define MOD                 1000000007LL
@@ -9,7 +22,7 @@ typedef long long ll;
 template <typename T> T gcd(T a, T b){return (b==0)?a:gcd(b,a%b);}
 template <typename T> T lcm(T a, T b){return a*(b/gcd(a,b));}
 template <typename T> T powerL(T b, T p, T m){T x = 1;while(p){if(p&1)x=(x*b)%m;b=(b*b)%m;p=p>>1;}return x;}
-template <typename T> T invFermat(T a, T p){return mod_exp(a, p-2, p);}
+template <typename T> T invFermat(T a, T p){return powerL(a, p-2, p);}
 template <typename T> T exp(T b, T p){T x = 1;while(p){if(p&1)x=(x*b);b=(b*b);p=p>>1;}return x;}
 
 // Usually done for Calculations most optimised
@@ -32,9 +45,6 @@ ll nCr(int n, int r){
 }
 
 int main(){
-    
     init();
-    // now use nCr(value1, value2) you will get answer
-    
-    return 0;
+    // use nCr(i,j);
 }
