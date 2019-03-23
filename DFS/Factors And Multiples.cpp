@@ -4,6 +4,7 @@ Solution: Mine or Kmcode are best
 Factors are Finite divisors while Multiples are infinite numbers.
 Eg: Factors(9): 1 3 9
     Multiples(9): 9 18 27 36 45 .....
+    
 int main(){
     std::vector<int> v[MAX];
     
@@ -40,3 +41,38 @@ std::vector<int> v[41];
         cout<<nl;
     }
 }
+
+**************Abdullah's Prime Code*************
+int main(){
+    int N = (int)1e6 + 5;
+    LL pr[N];
+    fill(pr,pr+N,0);
+    for(int i=2;i<N;i++)
+    {
+        if(pr[i]==0)
+        {
+            for(int j=i+i;j<N;j+=i)
+                pr[j]++;
+            pr[i]=1;
+        }
+    }
+}
+
+***********Ashish Gupta's Prime Code**************
+const int N = 1e6 + 5;
+int seive[N];
+
+void pre(){
+    fill(seive+2, seive+N, 1);
+
+    for(int i = 2; i < N; i++){
+        if(seive[i]){
+            for(int j = 2; j*i <= N; j++){
+                seive[i*j] = 0;
+            }
+        }
+    }
+}
+
+Solve Problem: https://www.codechef.com/WCS2019/problems/WCSE (using any of Ashish or Abdullah Code)
+
