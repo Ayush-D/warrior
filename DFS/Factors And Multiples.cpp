@@ -1,3 +1,6 @@
+Question: https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/query-multiples-6cf951be/description/
+Solution: Mine or Kmcode are best
+
 Factors are Finite divisors while Multiples are infinite numbers.
 Eg: Factors(9): 1 3 9
     Multiples(9): 9 18 27 36 45 .....
