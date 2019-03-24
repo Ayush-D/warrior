@@ -3,8 +3,16 @@ Its prime factorization is 2^2×3. Is it possible to divide 12 with 5?
 No. Cause the prime factorization of 12 does not contain 5. We can divide N with primes that appear in factorization of N.
 Next, can we divide 12 with 2^3? No. The power of 2 in prime factorization of 12 is 2^2. 
 So we cannot divide 12 with 2^3, since 2^2 is not divisible by 23.
-Take Help from Here for NOD: https://forthright48.com/2015/07/number-of-divisors-of-integer.html
-Take Help from Here for SOD: https://forthright48.com/category/cpps/number-theory/page/9 
+Take Help from Here for NOD(): https://forthright48.com/2015/07/number-of-divisors-of-integer.html
+
+It is possible to find SOD(N) using the prime factorization of N. Let us see an example for it.
+Let N=12, 
+SOD(12)=1+2+3+4+6+12, 
+SOD(12)=(2^0×3^0)+(2^1×3^0)+(2^0×3^1)+(2^2×3^0)+(21×3^1)+(2^2×3^1), 
+SOD(12)=2^0(30+31)+2^1(30+31)+2^2(30+31), 
+SOD(12)=(2^0+2^1+2^2)×(3^0+3^1)
+Take Help from Here for SOD(): https://forthright48.com/category/cpps/number-theory/page/9 
+
 
 **********************Prime Factorization of Number (Full Working Code) **********************
 
