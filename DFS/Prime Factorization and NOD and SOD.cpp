@@ -60,3 +60,25 @@ int main(){
     }
 
 }
+
+***************Number of Prime Factors/or Prime Numbers in the Range*****************
+
+const int N = 1e6 + 5;
+int seive[N];
+
+void precompute()
+{
+	fill(seive+2, seive+N, 1);
+	for(int i=2;i<N;i++)
+	{
+		if(seive[i])
+		{
+			for(int j=2;i*j<N;j++)
+			{
+				cnt[i*j]++;         // Only this part to analyze this yourself :)  for prime Number's add cnt[i*j].pb(i)  :))
+				seive[i*j]=0;
+			}
+			cnt[i]++;               // For Prime Number's to add Themself, LOL :))
+		}
+	}
+}
