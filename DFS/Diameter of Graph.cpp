@@ -33,6 +33,12 @@ template <typename T>T power(T e, T n, T m){T x=1,p=e;while(n){if(n&1)x=mod(x*p,
 template <typename T>T powerL(T e, T n, T m){T x=1,p=e;while(n){if(n&1)x=mulmod(x,p,m);p=mulmod(p,p,m);n>>=1;}return x;}
 
 
+int X[8] = {1,1,0,-1,-1,-1, 0, 1}; // trick to explore an implicit 2D grid
+int Y[8] = {0,1,1, 1, 0,-1,-1,-1};
+
+int X[4]={0 ,0 , 1 , -1};
+int Y[4]={-1 , 1 , 0 , 0};
+***********Used X and Y*******
 
 LL MOD = 998244353;
 const int N = 1e5 + 5;
