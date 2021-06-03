@@ -40,3 +40,12 @@ int main() {
 	for(auto &x: ans)	cout<<x<<" ";
 	return 0;
 }
+
+// For checking cycle in directed graph
+// Now just maintain the order of the topological indecies of the nodes and then check
+// index[parent_node] > index[child_node] then cycle exists.
+// More details:-----------------------------------------------------------
+// In Topological Sort, the idea is to visit the parent node followed by the child node. 
+// If the given graph contains a cycle, then there is at least one node which is a parent as 
+// well as a child so this will break Topological Order. 
+// Therefore, after the topological sort, check for every directed edge whether it follows the order or not.
