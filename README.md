@@ -22,3 +22,7 @@ following function to calculate distances:
 int hamming(int a, int b) {
 return __builtin_popcount(a^b);
 }
+1. ![image](https://user-images.githubusercontent.com/31109284/120796125-111f7400-c558-11eb-8eef-c5d96160ab73.png)
+2. ![image](https://user-images.githubusercontent.com/31109284/120796191-25637100-c558-11eb-8aa0-5d15b6dd86ef.png)
+3. ![image](https://user-images.githubusercontent.com/31109284/120796060-f4833c00-c557-11eb-88d7-a6d84639c81d.png)
+
